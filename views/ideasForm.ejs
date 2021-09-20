@@ -1,0 +1,48 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/navbar') %>
+
+        <section class='main-content-background main-content-background-form'>
+
+            <h1 class='content-header'>Create your own ideas!</h1>
+
+            <form method='POST' action="/ideas">
+
+                <p class='label'>Enter what kind of activity you want to do:</p>
+                <select name="type" id="type">
+                    <option disable selected value>--Select a type--</option>
+                    <option value="education">Education</option>
+                    <option value="recreational">Recreational</option>
+                    <option value="social">Social</option>
+                    <option value="charity">Charity</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="music">Music</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="diy">DIY</option>
+                    <option value="busywork">Chores</option>
+                </select>
+                <p class='label'>Price:</p>
+                <label for="free">Free</label>
+                <input type="radio" name="price" value="free" id="free">
+                <label for="cheap">Cheap</label>
+                <input type="radio" name="price" value='cheap' id="cheap">
+                <label for="luxury">Luxury</label>
+                <input type="radio" name="price" value='luxury' id="luxury">
+                <p class='label'>Effort required:</p>
+                <label for="easy">Easy</label>
+                <input type="radio" name="accessibility" value='easy' id="easy">
+                <label for="medium">Medium</label>
+                <input type="radio" name="accessibility" value='medium' id="medium">
+                <label for="hard">Hard</label>
+                <input type="radio" name="accessibility" value='hard' id="hard">
+                <p class='label'>Number of people:</p>
+                <label for="alone">Alone</label>
+                <input type="radio" name="participants" value='alone' id="alone">
+                <label for="notAlone">Not alone</label>
+                <input type="radio" name="participants" value='notAlone' id="notAlone">
+                <br>
+                <input id='submit-button' type="submit">
+            </form>
+        </section>
+
+        <%- include('partials/footer') %>
