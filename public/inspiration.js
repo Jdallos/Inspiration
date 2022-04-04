@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     const getQuote = async () => {
       try {
-        const res = await axios.get("http://www.boredapi.com/api/activity/");
+        const res = await axios.get("https://www.boredapi.com/api/activity/");
         return res.data.activity;
       } catch {
         return "Oh no, something went wrong! Someone once said, 'To overcome bordeom we must investigate it closely...'";
