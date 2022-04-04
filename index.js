@@ -99,7 +99,7 @@ app.post("/ideas", async (req, res) => {
   const getQuote = async () => {
     try {
       const res = await axios.get(
-        `http://www.boredapi.com/api/activity?type=${type}&minprice=${minPrice}&maxprice=${maxPrice}&minaccessibility=${minAccessibility}&maxaccessibility=${maxAccessibility}&participants=${participants}`
+        `https://www.boredapi.com/api/activity?type=${type}&minprice=${minPrice}&maxprice=${maxPrice}&minaccessibility=${minAccessibility}&maxaccessibility=${maxAccessibility}&participants=${participants}`
       );
 
       if (res.data.activity === undefined) {
